@@ -31,3 +31,17 @@ const TimeSelector = ({ availableTimes, onChange }) => {
 };
 
 export default TimeSelector;
+
+
+// export default function TimeSelector({ availableTimes, name, onChange }) {
+//   return (
+//       <select name={name} onChange={onChange}>
+//           <option value="">Selecione o horário</option>
+//           {availableTimes.map(time => (
+//               <option key={time} value={time}>
+//                   {time}
+//               </option>
+//           ))}
+//       </select>
+//   );
+// }

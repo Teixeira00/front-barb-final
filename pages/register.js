@@ -7,11 +7,49 @@ import Card from '../src/components/Card/Card'
 import Dropdown from '../src/components/dropdown/dropdown'
 import Link from 'next/link'
 import TimeSelector from '../src/components/timeSelector/timeSelector'
+import { useState } from 'react'
+import { useRouter } from 'next/router';
 
 export default function Register() {
-  const optionsService = ['Serviço 1', 'Serviço 2', 'Serviço 3'];  //array que armazena lista de serviços prestados
-  const optionsProf = ['Profissional 1', 'Profissional 2', 'Profissional 3'];  //array que armazena lista de profissionais
-  const availableTimes = ['13:00','14:00','15:00']; //array que armazena lista de horas disponíveis
+
+  const router = useRouter(); // Inicializando o useRouter
+    const [formData, setFormData] = useState({
+        nome: '',
+        telefone: '',
+        cpf: '',
+        servico: '',
+        profissional: '',
+        data: '',
+        hora: '',
+    });
+
+    const optionsService = ['Serviço 1', 'Serviço 2', 'Serviço 3'];
+    const optionsProf = ['Profissional 1', 'Profissional 2', 'Profissional 3'];
+    const availableTimes = ['13:00', '14:00', '15:00'];
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Impede o comportamento padrão do formulário
+        
+        // Verificar se todos os campos obrigatórios estão preenchidos
+        const { nome, telefone, cpf, servico, profissional, data, hora } = formData;
+        if (nome && telefone && cpf && servico && profissional && data && hora) {
+            // Redirecionar para a página de informações, passando os dados como query parameters
+            router.push({
+                pathname: '/consultInfo',
+                query: formData, // Passando os dados como query parameters
+            });
+        } else {
+            alert("Por favor, preencha todos os campos obrigatórios."); // Mensagem de erro caso falte algum dado
+        }
+    };
 
   return (
     <div className={styles.background}>
@@ -34,3 +72,4 @@ export default function Register() {
         </div>
   )
 }
+

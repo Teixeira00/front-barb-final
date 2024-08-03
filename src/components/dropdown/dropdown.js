@@ -27,34 +27,17 @@ function Dropdown({ options, placeholder }) {
 export default Dropdown;
 
 
-// export default function Dropdown({ options, placeholder }){
-//   return (
-//     <Autocomplete
-//       // disablePortal
-//       className={styles.option}
-//       options={options}
-      
-//       renderInput={
-//         (params) => 
-//         <TextField {...params} 
-//         sx={
-//           {'& .MuiInputBase-root': {height: '45px'},
-//             '& .MuiInputLabel-root': {
-//               top: '13px',   // Ajuste a posição vertical do label
-//               left: '30px',  // Ajuste a posição horizontal do label
-//               transform: 'none',  // Desativa o comportamento padrão de flutuação do label
-//               position: 'absolute', // Necessário para posicionar o label manualmente
-//             },
-//             '&.Mui-focused': {
-//                 borderColor: '#ccc', // Cor da borda quando em foco
-//                 boxShadow: 'none', // Remove a sombra de foco
-//               }
-//           }
-//         }
-//         label= "teste" 
-//         />
-//       }
-//     />
-//   );
-// }
+// import styles from './dropdown.module.css';
 
+// export default function Dropdown({ options, name, placeholder, onChange }) {
+//     return (
+//         <select name={name} onChange={onChange} className={styles.dropdown}>
+//             <option value="">{placeholder}</option>
+//             {options.map(option => (
+//                 <option key={option} value={option}>
+//                     {option}
+//                 </option>
+//             ))}
+//         </select>
+//     );
+// }

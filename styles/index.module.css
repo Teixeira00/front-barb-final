@@ -4,20 +4,6 @@
   align-items: center;
   height: 100vh;
   background-color: #423B35;
-
-}
-
-
-.novaConta {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: transparent;
-  border: 1px #e0a04a solid;
-  border-radius: 15px;
-  padding: 10px 30px;
-  color: #e0a04a;
-  cursor: pointer;
 }
 
 .form {
