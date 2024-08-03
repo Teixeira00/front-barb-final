@@ -1,0 +1,21 @@
+/* .card{
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+.nomeEmpresa{
+    text-align: center;
+    color: #e0a04a;
+    letter-spacing: 10px;
+    text-shadow: #000 2px 4px 2px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.title{
+    text-align: center;
+    color: #e0a04a;
+    margin-top: 12px;
+}

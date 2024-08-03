@@ -1,0 +1,15 @@
+.input{
+    font-size: 14px;
+    width: 450px;
+    padding: 15px 30px;
+    border: 0;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.input::-webkit-calendar-picker-indicator {
+    background: url('./calendario.png') no-repeat center center;
+    background-size: 20px 20px;
+  }
+

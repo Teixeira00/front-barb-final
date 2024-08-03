@@ -1,0 +1,46 @@
+ .background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #423B35;
+
+}
+
+
+.novaConta {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 1px #e0a04a solid;
+  border-radius: 15px;
+  padding: 10px 30px;
+  color: #e0a04a;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  /* border: 1px solid red; */
+} 
+
+.buttonContainer{
+  display: flex; 
+  gap: 30px;
+  justify-content:space-between; 
+}
+
+.back{
+  width: 200px;
+  background-color: #a5a19c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;  
+}

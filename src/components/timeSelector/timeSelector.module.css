@@ -1,0 +1,8 @@
+.timeSelector {
+    width: 450px;
+    padding: 15px 30px;
+    border: 0;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    font-size: 14px;
+  }
