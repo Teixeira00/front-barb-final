@@ -8,10 +8,10 @@ import Link from "next/link";
 export default function Index(){
   return (
     <div className={styles.background}>
-      <Card nomeEmpresa="DOM CHICO BARBEARIA" title="">
+      <Card nomeEmpresa="DOM CHICO BARBEARIA" title="Agendamento">     
         <div className={styles.form}>
-          <Button link="./register">Agendamento</Button>
-          <Button>TESTE2</Button>
+          <Button link="./register">Agendar</Button>                    
+          <Button link="./consult">Visualizar</Button>
         </div>
       </Card>
     </div>

@@ -9,14 +9,9 @@ import Link from 'next/link'
 import TimeSelector from '../src/components/timeSelector/timeSelector'
 
 export default function Register() {
-  const optionsService = ['Serviço 1', 'Serviço 2', 'Serviço 3'];  //serviços
-  const optionsProf = ['Profissional 1', 'Profissional 2', 'Profissional 3'];  //profissionais
-  const availableTimes = [       //horas disponíveis
-    '13:00',
-    '14:00',
-    '15:00'
-  ];
-
+  const optionsService = ['Serviço 1', 'Serviço 2', 'Serviço 3'];  //array que armazena lista de serviços prestados
+  const optionsProf = ['Profissional 1', 'Profissional 2', 'Profissional 3'];  //array que armazena lista de profissionais
+  const availableTimes = ['13:00','14:00','15:00']; //array que armazena lista de horas disponíveis
 
   return (
     <div className={styles.background}>
@@ -25,15 +20,12 @@ export default function Register() {
                     <Input type="text" placeholder="Nome Completo" pattern="[A-Za-z ]+"  title="Somente caracteres"/>
                     <Input type="text" placeholder="Telefone"  pattern="[0-9 ]+" title="Somente números"/>
                     <Input type="text" placeholder="CPF"  pattern="[0-9 ]+" title="Somente números"/>
-                    {/* <Input type="text" placeholder="Serviço"/> */}
                     <Dropdown options={optionsService} placeholder="Serviço" />
-                    {/* <Input type="text" placeholder="Profissional"/> */}
                     <Dropdown options={optionsProf} placeholder="Profissional" />
                     <Input type="date" placeholder="Data"/>
-                    {/* <Input type="time" placeholder="Horários Disponíveis"/> */}
                     <TimeSelector availableTimes={availableTimes}  />
-                    <div className={styles.buttonContainer}>
-                      <Button className={styles.back} link="./#">Voltar</Button> 
+                    <div className={styles.buttonContainer}>                           
+                      <Button type="button" className={styles.back} link="./#">Voltar</Button> 
                       <Button>Marcar</Button>
                     </div>
 

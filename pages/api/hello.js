@@ -1,5 +1,2 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import styles from '../../styles/index.module.css'
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
-}
