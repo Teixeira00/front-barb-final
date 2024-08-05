@@ -1,4 +1,4 @@
-// import Head from 'next/head';
+import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/index.module.css';
 import Input from '../src/components/input/input';

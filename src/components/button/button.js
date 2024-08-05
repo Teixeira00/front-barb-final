@@ -13,7 +13,7 @@ export default function Button({ children, link, ...props }) {
         );
     }
 
-    // Caso contrário, retornamos um botão normal
+    // Caso contrário, retorna um botão normal
     return (
         <button className={styles.button} {...props}>
             {children}
