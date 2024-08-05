@@ -1,5 +1,3 @@
-/* styles/consultInfo.module.css */
-
 .background {
     display: flex;
     justify-content: center;
@@ -7,12 +5,46 @@
     height: 100vh;
 }
   
-  .form {
+.form {
     background-color: #fff; 
     padding: 20px; 
     border-radius: 5px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     width: 450px; 
     margin-bottom: 15px;
-  }
+}
+
   
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+}
+
+.back{
+  width: 200px;
+  background-color: #a5a19c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+.errorMessage {
+    color: rgb(214, 54, 54);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.successMessage {
+  color: rgb(80, 161, 64);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.deleteButton{
+  border: none;
+  color: rgb(214, 54, 54);
+  cursor: pointer;
+}
