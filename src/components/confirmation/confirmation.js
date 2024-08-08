@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import styles from './confirmation.module.css';
 
-const Confirmation = ({ isOpen, onConfirm, onCancel, originalCpf }) => {
-    const [confirmationCpf, setConfirmationCpf] = useState('');
+const Confirmation = ({ isOpen, onConfirm, onCancel, originalCnpj }) => {
+    const [confirmationCnpj, setConfirmationCnpj] = useState('');
     const [error, setError] = useState('');
 
     const handleConfirm = () => {
-        if (confirmationCpf === originalCpf) {
+        if (confirmationCnpj === originalCnpj) {
             onConfirm(); // Chama a função de confirmação passada por props
         } else {
-            setError('O CPF de confirmação não corresponde ao CPF do agendamento.');
+            setError('O CNPJ de confirmação não corresponde ao CNPJ do cadastro.');
         }
     };
 
@@ -19,12 +19,12 @@ const Confirmation = ({ isOpen, onConfirm, onCancel, originalCpf }) => {
         <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
                 <h2>Confirmar Exclusão</h2>
-                <p>Digite o CPF para confirmar a exclusão do agendamento.</p>
+                <p>Digite o CNPJ para confirmar a exclusão do cadastro.</p>
                 <input 
                     type="text" 
-                    placeholder="Confirme o CPF" 
-                    value={confirmationCpf} 
-                    onChange={(e) => setConfirmationCpf(e.target.value)} 
+                    placeholder="Confirme o ID" 
+                    value={confirmationCnpj} 
+                    onChange={(e) => setConfirmationCnpj(e.target.value)} 
                 />
                 {error && <p className={styles.errorMessage}>{error}</p>}
                 <div className={styles.buttonContainer}>
